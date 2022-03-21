@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container"></div>
+    <div class="row" >
+        <h1>Your list of <span data-th-text="${count}"></span> numbers.</h1>
+    </div>
+    <div class="row">
+        <div class="col d-flex justify-content-around">
+            <span class="row" data-th-each="i: ${generatedImg}">
+                &nbsp; <img data-th-src="@{${'/images/' + i}}" alt="" width=200 height=200 class="img-thumbnail"> &nbsp;
+            </span>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
